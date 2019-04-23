@@ -1,25 +1,10 @@
-const giveAcessTo = (name) => 'Acess granted to ' + name;
-
-function authenticate(verify) {
-    let array = [];
-    for (let i = 0; i < verify; i++) {
-        array.push(i)
+/*const multiply = function (num1) {
+    return function (num2) {
+        return num1 * num2
     }
-    return giveAcessTo(person.name)
-}
+}*/
 
-function sing(person) {
-    return 'la la la my name is ' + person.name;
-}
+const multiply = (num1) => (num2) => num1 * num2
 
-function letPerson(person, fn) {
-    if (person.level === 'admin') {
-        return fn(500000)
-    } else if (person.level === 'user')
-        return fn(5000)
-}
-
-letPerson({
-    level: 'user',
-    name: 'Tim'
-}, authenticate)
+const multiplyBytwo = multiply(2);
+const multiplyByFive = multiply(5);
